@@ -1,0 +1,602 @@
+/* CSS TABLE OF CONTENTS
+=====================================
+    #BASE CSS
+    #SITE-SPECIFIC CSS
+===================================== */
+
+/* BASE (Initital Setup)
+=====================================
+    #RESET
+    #HTML5
+    #BASE TYPOGRAPHY
+        #BODY
+        #HEADINGS
+        #PARAGRAPHS
+        #LINKS
+        #LISTS
+    #IMAGES
+    #CLEARFIX
+===================================== */
+
+/* SITE SPECIFIC (Custom CSS for The Client Site)
+=====================================
+    #SITE-SPECIFIC GENERAL STYLING
+    #SITE-SPECIFIC TYPOGRAPHY
+    #LAYOUT/GRID
+    #SECTIONS
+    #MEDIA QUERIES
+    #@FONT-FACE
+===================================== */
+
+
+/* RESET */
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* HTML5 */
+header, section, footer, aside, article, nav, figure, {
+    display: block;
+}
+
+/* BASE TYPOGRAPHY */
+
+/* BODY */
+body {
+  font-size: 100%; /* 1 em= 16 px */
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5em;
+  color: #333;
+}
+
+/* HEADINGS
+  48, 36, 24, 21, 18, 16
+*/
+h1, h2, h3, h4, h6 {
+  margin-bottom: .5em;
+  line-height: 1em;
+}
+
+h1 {
+  font-size: 3em;
+  line-height: 1em;
+}
+
+h2 {
+  font-size: 2.25em;
+  line-height: 1.1em;
+}
+
+h3 {
+  font-size: 1.5em;
+  line-height: 1.2em;
+}
+
+h4 {
+  font-size: 1.3125em;
+  line-height: 1.3em;
+}
+
+h5 {
+  font-size: 1.125em;
+  line-height: 1.4em;
+}
+
+h6 {
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+
+/* PARAGRAPHS */
+p {
+  margin-bottom: 2em;
+}
+/* LINKS */
+
+a {
+  color: #369;
+  text-decoration: none;
+}
+
+a:hover, a:active, a:visited {
+  color: #069;
+}
+
+/* LISTS */
+
+ul, ol {
+  margin-bottom: .5em;
+}
+
+ul li ul, ul li ol, ol li ol, ol li ul {
+  margin-bottom: 0;
+}
+
+li {
+  margin-left: 1.875em;
+}
+
+/* IMAGES */
+
+.scale-with-grid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* CLEARFIX */
+
+.row:before,
+.row:after {
+  content: "";
+  display: table;
+}
+.row:after {
+  clear: both;
+}
+.row {
+  clear: both;
+  *zoom: 1;
+}
+
+/* SITE SPECIFIC CSS */
+body {
+  background: #333;
+}
+
+.container {
+  position: relative;
+  width: 60em;
+  margin: 0 auto;
+
+}
+
+h1{
+  font-family: 'chunkfive', 'Arial Black', Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 2.625em;
+  line-height: 1.19em;
+  /* 42px/50px */
+}
+
+h2{
+  font-size: 1.5em;
+  line-height: 1.25em;
+  font-weight: normal;
+  letter-spacing: -.025em;
+  /* 24px/30px */
+}
+
+h3{
+  font-size: 1.3125em;
+  line-height: 1.143em;
+  letter-spacing: -.04em;
+  /* 21px/24px */
+}
+
+h4{
+  font-size: .6875em;
+  line-height: 1.27em;
+  font-weight: normal;
+  color: #615c5c;
+  text-transform: uppercase;
+  /* 11px/14px */
+}
+
+.copyright {
+  color: white;
+
+}
+
+/*LAYOUT/GRID*/
+
+.section01 .col-1 {
+  width: 61.7%;
+  float: left;
+  margin: 0 1.06% 0 0 ;
+}
+
+.section01 .col-2 {
+  width: 36.17%;
+  float: right;
+  margin: 0 0 0 1.06%;
+}
+
+.section02 .col{
+  width: 23.4%;
+  float: left;
+  margin-right: 14.9%;
+}
+
+.section02 .col:last-of-type {
+  margin-right: 0
+}
+
+
+.footer .col {
+  width: 17.02%;
+  float: left;
+  margin-right: 2.12%;
+}
+
+
+.footer .col:last-of-type {
+  width: 23.4%;
+  float: right;
+  margin: 0 0 0 19.14%;
+}
+
+
+/* MEDIA QUERIES */
+
+/* Tablet */
+@media only screen and (min-width: 48px) and (max-width: 62px) {
+  body {
+    font-size: 87.5%; /*14px*/
+  }
+
+  .container {
+    width: 92%;
+    /*padding: 4%;*/
+  }
+
+  .section02 .col {
+    width: 30%;
+  }
+
+}
+
+
+/* MOBILE */
+@media only screen and (max-width: 47.9999em) {
+  body {
+    font-size: 75%; /* 12 px*/
+  }
+
+  .container {
+    width: 96%;
+    /*padding: 2%;*/
+  }
+
+  .logo a {
+    position: static;
+    margin: .5em auto;
+    width: 225px;
+    padding-top: 38px;
+    background-size: 250px 43px;
+  }
+
+  .header {
+    height: 115px;
+  }
+
+  .logo {
+    padding-top: 1em;
+  }
+
+  .utility-nav {
+    display: none;
+  }
+
+
+  .main-nav ul {
+    padding: 1em 0;
+  }
+
+
+  .main-nav li {
+    float: none;
+  }
+
+  .section01 .col-1,
+  .section01 .col-2,
+  .section02 .col,
+  .footer .col
+  .footer .col:last-of-type {
+    width: 96%;
+    float: none;
+    margin: 1em 2%;
+  }
+
+  .section02 .col {
+    margin-bottom: 3em;
+  }
+
+  .footer .col {
+    margin-bottom: 1em;
+  }
+
+  .copyright {
+    float: none;
+    margin: 0 2%;
+  }
+
+  /*.footer .col {
+    width: 17.02%;
+    float: left;
+    margin-right: 2.12%;
+  }
+
+
+  .footer .col:last-of-type {
+    width: 23.4%;
+    float: right;
+    margin: 0 0 0 19.14%;
+  }*/
+
+}
+
+/* HEADER */
+  .header {
+    height: 155px;
+    background: #3279a1;
+  }
+
+
+  /*.leahy {
+  width: 300px;
+  height: 0;
+  padding: 75px 0 0 0;
+  background: url('myimage.png');
+  overflow: hidden;
+}*/
+
+  .logo {
+    margin: 0;
+  }
+
+  .logo a {
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 12px;
+    background-image: url('../images/companyname_logo.png');
+    background-repeat: no-repeat;
+    width: 349px;
+    height: 0;
+    padding-top: 58px;
+    /*border: solid;*/
+    overflow: hidden;
+  }
+
+  .tagline {
+    text-indent: -9999px;
+  }
+
+  .utility-nav {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    list-style: none;
+  }
+
+  .utility-nav li {
+    margin-left: 1em;
+    float: left;
+  }
+
+  .utility-nav li a {
+    color: #fff;
+    font-size: .75em;
+    text-decoration: underline;
+  }
+
+/* MAIN NAV */
+  .main-nav {
+    background: #333;
+  }
+
+  .main-nav ul {
+    list-style: none;
+    margin: 0;
+  }
+
+  .main-nav li {
+    margin-left: 0;
+    float: left;
+  }
+
+  .main-nav a {
+    display: block;
+    font-family: "Arial Black", "Arial Bold", Helvetica, Gadget, sans-serif;
+    font-size: 1em;
+    line-height: 1.5em;
+    padding: 0.8em 0.5em;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  .main-nav a:hover {
+    background: #aaa;
+    color: #333;
+  }
+
+  .main-nav a.active {
+    color: #53aee0;
+    background: transparent;
+  }
+
+
+/* SECTION 1 */
+  .section01 {
+    background: #ccc;
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+
+  .section01 h2 {
+    font-family: 'chunkfive', 'Arial Black', Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 2.625em;
+    line-height: 1.19em;
+  }
+
+  .section01 h2 a {
+    color: #333;
+  }
+
+  .button-big {
+    display: block;
+    background: url('../images/button-big.gif') no-repeat 0 0;
+    width: 236px;
+    height: 0;
+    padding-top: 59px;
+    overflow: hidden;
+  }
+
+  .button-big:hover {
+      background: url('../images/button-big.gif') no-repeat 0 -59px;
+  }
+
+  .button-small {
+    display: block;
+    background: url('../images/button-small.png') no-repeat 0 0;
+    width: 128px;
+    height: 0;
+    padding-top: 30px;
+    overflow: hidden;
+  }
+
+  .button-small:hover {
+    background: url('../images/button-small.png') no-repeat 0 -30px;
+  }
+
+
+/* SECTION 2 */
+  .section02 {
+    background: #fff;
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+
+  .section02 h3 {
+    margin-bottom: .15em;
+  }
+
+  .section02 h4 {
+    padding-bottom: .5em;
+    border-bottom: 4px solid #000;
+  }
+
+/* ABOUT PAGE */
+  main {
+    background: #fff;
+    padding: 3em 0;
+  }
+
+  .article {
+    width: 62%;
+    float: left;
+  }
+
+  .article h1 {
+    margin-bottom: 0.2em;
+  }
+
+  .article .date {
+    margin-top: 3em;
+    margin-bottom: 1.5;
+  }
+
+  .sidebar {
+    width: 30%;
+    float: right;
+  }
+
+  .widget {
+    margin-bottom: 1.5em;
+    background: #ccc;
+    padding: 2.1em;
+  }
+
+  .widget h3 {
+    border-bottom: 4px solid #000;
+    padding-bottom: .2em;
+  }
+
+  .widget ul {
+    list-style: none;
+    margin-bottom: 0;
+  }
+
+  .widget li {
+    margin-left: 0;
+  }
+
+  .widget p {
+    font-size: .75em;
+    line-height: 1.6em;
+    margin-bottom: 0;
+  }
+
+
+/* FOOTER */
+  .footer {
+    padding: 2em 0;
+    background: #333;
+    /*background: orange;*/
+    color: #fff;
+  }
+
+  .footer ul li {
+    margin: 0;
+    list-style: none;
+    font-family: Arial, 'Helvetica  Neue', Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+
+  }
+
+  .footer ul li a {
+    color: #fff;
+    font-size: 1.125em;
+    line-height: 1.111em;
+    display: block;
+
+  }
+
+  .footer ul li ul li a {
+    font-weight: normal;
+    text-transform: none;
+    font-size: 0.6875em;
+    line-height: 1.6363em;
+    /*border-bottom: 1px solid #fff;*/
+  }
+
+.footer ul li ul {
+border-top: 1px solid #fff;
+  margin-top: .4em ;
+  margin-bottom: 1em;
+  padding: .4em;
+
+}
+
+.footer li address {
+  font-style: normal;
+  font-size: 0.6875em;
+  line-height: 1.6363em;
+}
+
+
+.copyright {
+  color: #999;
+  letter-spacing: .05em;
+  font-size: .5625em;
+  line-height: 1.777em;
+  float: right;
+  margin: 5em 0;
+}
+
+
+/*@FONT-FACE*/
+@font-face {
+    font-family: 'ChunkFive';
+    src: url('/fonts/chunkfive.eot');
+    src: url('/fonts/chunkfive.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/chunkfive.woff2') format('woff2'),
+         url('/fonts/chunkfive.woff') format('woff'),
+         url('/fonts/chunkfive.ttf') format('truetype'),
+         url('/fonts/chunkfive.svg#chunkfiveroman') format('svg');
+
+}
